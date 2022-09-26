@@ -37,7 +37,7 @@ const generateEmployee = function(employee){
         </div>
     </div>
     `
-}
+};
 
 const generateEngineer = function(engineer){
    return`
@@ -58,7 +58,7 @@ const generateEngineer = function(engineer){
 </div>
 </div>
 `
-}
+};
 const generateIntern = function(intern){
     return`
     <div class="card" style="width: 18rem;">
@@ -73,9 +73,9 @@ const generateIntern = function(intern){
     </div>
 </div>
 </div>`
-}
+};
 
-}
+
 
 
 
