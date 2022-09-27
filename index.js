@@ -3,8 +3,12 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateHTML = require("./generateHTML");
 
-const questions = [{
+const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
+
+const questions = [{ 
     
     type: "input",
     name: "manager",
