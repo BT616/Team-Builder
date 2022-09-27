@@ -1,4 +1,6 @@
 
+function generateHTML(data) { 
+
 const generateManager = function (manager){
     return`
     <div class="container-fluid mt-3">
@@ -76,8 +78,7 @@ const generateIntern = function(intern){
 };
 
 
-
-
+};
 
 
 module.exports = generateHTML;

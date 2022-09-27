@@ -1,12 +1,10 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateHTML = require("./generateHTML");
 
-const generateHTML = require(answers);
-
-
-(async function (){ 
-const questions = await [{
+const questions = [{
+    
     
     type: "input",
     name: "manager",
@@ -174,6 +172,28 @@ const questions = await [{
     choices: ["employee,engineer"],
     
 
-},
-]
+}];
+
+
+
+
+
+
+function writeToFile(data){
+    const filename = "generate.html";
+
+fs.writeFile(filename, data, err => {
+  if (err) {
+    console.error(err);
+  }
+})};   
+
+
+ function init(){
+    inquirer.prompt(questions)
+        .then((answers) => writeToFile(generateHTML(answers)))
+    }
+
+    init();
+ 
 
