@@ -4,7 +4,7 @@ const fs = require('fs');
 const generateHTML = require("./generateHTML");
 
 const questions = [{
-    
+
     
     type: "input",
     name: "manager",
@@ -17,7 +17,7 @@ const questions = [{
 },
 {
     type: "input",
-    name: "manager-id",
+    name: "id",
     message: "what is your managers ID?"
 },
 {
@@ -25,156 +25,69 @@ const questions = [{
     name: "office",
     message: "what is your managers office number?"
 },
-{
-    type: "list",
-    name: "menu",
-    message: "Do you have other employee info you want to enter??",
-    choices: ["yes/no"]
-},
-{
-    type: "list",
-    name: "menu",
-    message: "who?",
-    choices: ["employee,engineer,intern"],
-    when(answers) {
-        return answers.menu === "yes"
-    }
-},
+
+//engineer
 {
     type: "input",
     name: "engineer",
     message: "whats the name of your other engineer?",
-    when(answers) {
-        return answers.menu === "engineer"
-    }
-},
-{
-    type: "input",
-    name: "engineer-github",
-    message: "whats thier github username?",
-    when(answers) {
-        return answers.menu === "engineer"
-    }
-},
-{
-    type: "input",
-    name: "engineer-email",
-    message: "whats thier email??",
-    when(answers) {
-        return answers.menu === "engineer"
-    }
-},
-{
-    type: "input",
-    name: "engineer-id",
-    message: "whats thier ID number?",
-    when(answers) {
-        return answers.menu === "engineer"
-    }
-},
-
-// this this will run after, if you selected engineer
-{
-    type: "list",
-    name: "menu",
-    message: "who?",
-    choices: ["employee,intern"],
     
-
 },
+{
+    type: "input",
+    name: "github",
+    message: "whats thier github username?",
+   
+},
+
 // not sure anymore but employee
 {
     type: "input",
     name: "employee",
     message: "whats the name of your employee?",
-    when(answers) {
-        return answers.menu === "employee"
-    }
+    
 },
 {
     type: "input",
     name: "employee-github",
     message: "whats thier github username?",
-    when(answers) {
-        return answers.menu === "employee"
-    }
+    
 },
 {
     type: "input",
     name: "employee-email",
     message: "whats thier email??",
-    when(answers) {
-        return answers.menu === "employee"
-    }
+    
 },
 {
     type: "input",
     name: "employee-id",
     message: "whats thier ID number?",
-    when(answers) {
-        return answers.menu === "employee"
-    }
-},
-{
-    type: "list",
-    name: "menu",
-    message: "who?",
-    choices: ["engineer,intern"],
-    
-
+   
 },
 
+]
 //intern 
+const generateIntern = [
 {
     type: "input",
     name: "intern",
     message: "whats the name of your intern?",
-    when(answers) {
-        return answers.menu === "intern"
-    }
-},
-{
-    type: "input",
-    name: "intern-email",
-    message: "whats thier email??",
-    when(answers) {
-        return answers.menu === "intern"
-    }
+   
 },
 {
     type: "input",
     name: "intern-id",
     message: "whats thier ID number?",
-    when(answers) {
-        return answers.menu === "intern"
-    }
+   
 },
 {
     type: "input",
-    name: "intern-school",
-    message: "where did they go to school?",
-    when(answers) {
-        return answers.menu === "intern"
-    }
+    name: "school",
+    message: "Where did they go to school?",
+   
 },
-{
-    type: "input",
-    name: "employee-2",
-    message: "where did they go to school?",
-    when(answers) {
-        return answers.menu === "intern"
-    }
-},
-{
-    type: "list",
-    name: "menu",
-    message: "who?",
-    choices: ["employee,engineer"],
-    
-
-}];
-
-
+]
 
 
 
