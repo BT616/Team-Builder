@@ -1,7 +1,7 @@
 
-function manager(data) { 
+const generateHTML = ({data,manager,github,office,school}) =>
 
-    return`
+    `
 
     <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,26 @@ function manager(data) {
 
          <div class="container-fluid mt-3">
             <div class="row justify-content-center">
-                    ${team}
+                   
+
+
+<div class="container-fluid mt-3">
+<div class="row justify-content-center">
+
+    <!--manager-->
+    <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">${data.name}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+            <p class="card-text">${data.id}</p>
+            <p class="card-text">${data.email}</p>
+            <p class="card-text">${data.office}</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+
               
 
             
@@ -40,27 +59,24 @@ function manager(data) {
 
 </html>
 `
-};
  
 
+{/* <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
 
-// <div class="container-fluid mt-3">
-//             <div class="row justify-content-center">
+                <!--manager-->
+                <div class="card" style="width: 18rem;">
 
-//                 <!--manager-->
-//                 <div class="card" style="width: 18rem;">
-
-//                     <div class="card-body">
-//                         <h5 class="card-title">${data.name}</h5>
-//                         <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
-//                         <p class="card-text">${data.id}</p>
-//                         <p class="card-text">${data.email}</p>
-//                         <p class="card-text">${data.office}</p>
-//                         <a href="#" class="card-link">Card link</a>
-//                         <a href="#" class="card-link">Another link</a>
-//                     </div>
-//                 </div>
-
+                    <div class="card-body">
+                        <h5 class="card-title">${data.name}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+                        <p class="card-text">${data.id}</p>
+                        <p class="card-text">${data.email}</p>
+                        <p class="card-text">${data.office}</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
 
 
 
@@ -77,7 +93,8 @@ function manager(data) {
 
 
 
-function employee(data){
+
+function generateCard = 
 
     return`
     <!--employee-->
@@ -131,6 +148,7 @@ const generateIntern = function(data){
 </div>`
 };
 
+ */}
 
 
 
